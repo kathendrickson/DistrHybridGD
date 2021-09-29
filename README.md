@@ -1,5 +1,4 @@
-# Simple-Asynch-Hybrid-Opt
-Simple Asynchronous Multi-Agent Hybrid Optimization Example
+# Distributed Hybrid Gradient Descent
 
 **Important Note: This example requires the the Hybrid Equations Toolbox v2.04:**
 * Ricardo Sanfelice (2021). Hybrid Equations Toolbox v2.04 (https://www.mathworks.com/matlabcentral/fileexchange/41372-hybrid-equations-toolbox-v2-04), MATLAB    Central File Exchange. Retrieved January 11, 2021
