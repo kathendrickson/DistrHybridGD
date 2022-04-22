@@ -66,7 +66,7 @@ MaxStep = taumax/10;
 options = odeset('RelTol', RelTol, 'MaxStep', MaxStep);
 
 %% Call HyEQsolver.m for 5 Agents
-[t_5 j_5 x_5] = HyEQsolver(@f,@G,@C,@D,xi0,TSPAN,JSPAN,rule,options);
+[t_5 j_5 x_5] = HyEQsolver(@f,@f,@C,@D,xi0,TSPAN,JSPAN,rule,options);
 disp(converged)
 
 convdiff_5 = ones(size(t_5))*0.5;
@@ -103,7 +103,7 @@ tauo = taumin + rand(1)*(taumax-taumin);
 xi0 = [z1o;z2o;tauo];
 
 %% Call HyEQsolver.m for 100 Agents
-[t_100 j_100 x_100] = HyEQsolver(@f,@G,@C,@D,xi0,TSPAN,JSPAN,rule,options);
+[t_100 j_100 x_100] = HyEQsolver(@f,@g,@C,@D,xi0,TSPAN,JSPAN,rule,options);
 disp(converged)
 
 convdiff_100 = ones(size(t_100))*0.5;
@@ -140,7 +140,7 @@ tauo = taumin + rand(1)*(taumax-taumin);
 xi0 = [z1o;z2o;tauo];
 
 %% Call HyEQsolver.m for 500 Agents
-[t_500 j_500 x_500] = HyEQsolver(@f,@G,@C,@D,xi0,TSPAN,JSPAN,rule,options);
+[t_500 j_500 x_500] = HyEQsolver(@f,@g,@C,@D,xi0,TSPAN,JSPAN,rule,options);
 disp(converged)
 
 convdiff_500 = ones(size(t_500))*0.5;
